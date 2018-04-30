@@ -6,66 +6,34 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<style type="text/css">
-		.navbar-inverse .navbar-nav > li > a{
-			color: white;
-		}
-		.jumbotron{
-			margin-top: 10%;
-			padding-bottom: 100px;
-		}
-		.Krini{
-			text-align: center;
-
-		}
-		.col-lg-4{
-			margin-right: auto;
-		}
-
-		.Krini h2 , .qualite h2{
-			color: #2c3e90;
-			font-family: 'Merriweather', serif;
-		    text-align: center;
-			font-size: 40px;
-
-		}
-		hr.style18 { 
-			  height: 30px; 
-			  border-style: solid; 
-			  border-color: #8c8b8b; 
-			  border-width: 1px 0 0 0; 
-			  border-radius: 20px; 
-		} 
-		hr.style18:before { 
-			  display: block; 
-			  content: ""; 
-			  height: 30px; 
-			  margin-top: -31px; 
-			  border-style: solid; 
-			  border-color: #8c8b8b; 
-			  border-width: 0 0 1px 0; 
-			  border-radius: 20px; 
-		}
-		.row{
-			text-align: center;
-			font-family: 'Merriweather', serif;
-		}
-		.thumbnail{
-			border: 2px solid white ;
-
-		}
-		
-
-		
-	</style>
-
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<link rel="stylesheet" type="text/css" href="">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link rel="icon"  href="https://cdn.ed.edmunds-media.com/unversioned/favicon/edmunds-logo.ico">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	<script>
+			var log_hidden=true;
+			function myLogin()
+			{
+			 	if ( log_hidden == true)
+			 	{
+			        $(".containerr").show(100);
+			        log_hidden=false;
 
+			 	
+			    } else {
+			        $(".containerr").hide('fast');
+			        log_hidden=true;
+			    }
+			 }
+			 $('.containerr').click(myLogin());
+	</script>
 </head>
 <body>
 		
 	
-	<nav class="navbar navbar-inverse navbar-fixed-top" style="background: #4267b2;">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background: rgba(66, 103, 178,0.3);">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header ">
@@ -83,7 +51,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="home.html">Home </a></li>
         <li><a href="#">Reservation</a></li>
-        <li><a href="#">Agencies</a></li>
+        <li><a href="Agencies.html">Agencies</a></li>
         <li><a href="conditions.html">Conditions</a></li>
 
 
@@ -91,10 +59,11 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li>
-        	<a href="Login.html"><i class="fas fa-user"></i> Login
+        <li >
+        	<a href="#" onclick="myLogin()" ><i class="fas fa-user"></i>Log In</a>
         	
-        	</a>
+        	
+        	
     	</li>
         <li><a href="sign in.html"><i class="fas fa-user-plus"></i> Sign in </a>
       </ul>
@@ -103,17 +72,49 @@
 </nav>
 
 <!-- end of the navbar-->
+<div class="container containerr" style="display : none ">
+	<div>
+		<h3>Log In</h3>
+		<hr class="hr3" />
+	</div>
+	<span style="display:block; height: 20px;"></span>
+	
+	<form>
+		<div class="email">
+			Email<span>*</span> :
+			<span style="display:inline-block; width: 30px;"></span>
+			<input type="email" placeholder="krinicar@example.zz" required>
+			
+		</div>
+		<span style="display:block; height: 15px;"></span>
+		<div class="password">
 
+			Password<span>*</span> :
+			<span style="display:inline-block; width: 10px;"></span>
+			<input type="password" placeholder="Password" id="password" required>
+        	
+		</div>
+
+		<div class="bouton">
+			<span style="display:block; height: 10px;"></span>
+			<button>Log In</button>
+			<span style="display:block; height: 20px;"></span>
+		</div>
+		<center><a href="#">Forgot password ?</a></center>
+		<center>Don't have an account? <a href="sign in.html">Sign In</a></center>
+	</form>
+	
+</div>
 
 <div class="container jumbotron" style="text-align: center; color: #2c3e50; background: #ecf0f1">
   <h1><i class="fas fa-car"></i> Welcome costumer!</h1>
   <p>Your destination is Our goal</p>
   <br>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Keep going</a></p>
+  <p><a class="btn btn-primary btn-lg" href="#keep" role="button">Keep going</a></p>
 </div>
 
 
-<div class="Krini container">
+<div class="Krini container" id="keep">
 	<h2>renting cars in Morrocco</h2>
 	<h3>Why <strong>Krini Car</strong>?</h3>
 	<p>Pellentesque fermentum feugiat sodales. Donec non elit pulvinar, ornare nibh quis, rutrum erat. Nam dignissim eros sed ante auctor iaculis. Ut eu convallis tellus. Phasellus ac nulla eget augue ornare tempus. Morbi at eros libero. Curabitur cursus enim at lorem posuere mattis. Morbi ante ante, cursus non rutrum eu, molestie vel leo. </p>
@@ -198,6 +199,7 @@
 <footer>
 	<div class="row" style="background: #2c3437 ; color: white">
 		<div class="col-lg-6">
+			<span style="display:block; height: 20px;"></span>
 			<h4 style="color: white;font-family: 'Merriweather'">online counselor</h5>
 			<p style="color: white">+2126000000</p>
 			<p style="color: white">08h30-12h30 & 14h30-19h00</p>
@@ -212,6 +214,7 @@
 			
 		</div>
 		<div class="col-lg-6">
+			<span style="display:block; height: 20px;"></span>
 			<iframe src="https://www.prayer-times.info/show_prayertimes.php?city_link=rabat" frameborder="0" width="580" height="290" scrolling="on"></iframe><br/><a href="https://www.prayer-times.info/morocco/rabat/" target="_blank" style="font-size:10px;">مواقيت الصلاة الرباط</a>
 		</div>
 		
@@ -220,6 +223,8 @@
 		<p><center>Krini car - © 2001-2018  -  Developed by  Z&Z</center> </p>
 	</div>
 </footer>
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

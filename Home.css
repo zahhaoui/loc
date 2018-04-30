@@ -1,0 +1,76 @@
+.navbar-inverse .navbar-nav > li > a{
+			color: white;
+}
+
+.containerr{
+			border-radius: 6px;
+			max-width: 285px;
+			background: #D8D8D8;
+    		border: 4px solid transparent;
+    		text-align: center;
+    		margin-top: -100px;
+    		margin-left: 1050px;
+    		display : none ;
+    		position: absolute;
+    		box-shadow: 2px 2px  #888888;
+
+
+}
+body{
+	background: url(http://overapi.com/static/images/background.jpg);
+
+}
+
+		.jumbotron
+		{
+			margin-top: 10%;
+			padding-bottom: 100px;
+
+		}
+		.Krini{
+			text-align: center;
+
+		}
+		.col-lg-4{
+			margin-right: auto;
+			
+		}
+
+		.Krini h2 , .qualite h2{
+			color: #2c3e90;
+			font-family: 'Merriweather', serif;
+		    text-align: center;
+			font-size: 40px;
+
+		}
+		hr.style18 { 
+			  height: 30px; 
+			  border-style: solid; 
+			  border-color: #8c8b8b; 
+			  border-width: 1px 0 0 0; 
+			  border-radius: 20px; 
+		} 
+		hr.style18:before { 
+			  display: block; 
+			  content: ""; 
+			  height: 30px; 
+			  margin-top: -31px; 
+			  border-style: solid; 
+			  border-color: #8c8b8b; 
+			  border-width: 0 0 1px 0; 
+			  border-radius: 20px; 
+		}
+		.row{
+			text-align: center;
+			font-family: 'Merriweather', serif;
+		}
+		.thumbnail{
+			border: transparent ;
+			background: rgba(14, 251, 252, 0.25) none repeat scroll 0% 0%;
+			max-width: 30%;
+			margin-left : 10px;
+
+		}
+		
+
+		
